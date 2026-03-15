@@ -1,0 +1,27 @@
+name: vesuvius
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - matplotlib
+  - scikit-image
+  - scikit-learn
+  - pandas
+  - seaborn
+  - jupyter
+  - zarr
+  - tifffile
+  - nibabel
+  - jupyterlab_widgets!=3.0.16
+  - pip
+  - pip:
+    - s3fs
+    - trimesh
+    - open3d
+
+# NOTE: Install PyTorch separately with CUDA support after creating the env:
+#   conda activate vesuvius
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118

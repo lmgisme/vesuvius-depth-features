@@ -1,0 +1,13 @@
+condition,feature,within_auc,cross_auc,auc_gap,within_bal_acc,cross_bal_acc
+raw,depth_gradient_mag,0.6192,0.6192,0.0,0.5007,0.5004
+raw,max_depth_gradient,0.624,0.624,0.0,0.5006,0.5015
+raw,depth_variance,0.6041,0.6041,0.0,0.5007,0.5001
+raw,depth_range,0.6162,0.6162,0.0,0.5007,0.4998
+paganin_db200,depth_gradient_mag,0.7661,0.7661,0.0,0.5037,0.5039
+paganin_db200,max_depth_gradient,0.7709,0.7709,0.0,0.5054,0.5048
+paganin_db200,depth_variance,0.7566,0.7566,0.0,0.5051,0.504
+paganin_db200,depth_range,0.7646,0.7646,0.0,0.5019,0.5018
+paganin_db5000,depth_gradient_mag,0.7573,0.7573,0.0,0.5038,0.505
+paganin_db5000,max_depth_gradient,0.7626,0.7626,0.0,0.5032,0.5056
+paganin_db5000,depth_variance,0.7479,0.7479,-0.0,0.5043,0.5031
+paganin_db5000,depth_range,0.7553,0.7553,-0.0,0.5024,0.5033
