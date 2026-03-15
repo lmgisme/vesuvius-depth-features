@@ -1,0 +1,11 @@
+feature,primary_metric,within_bal_acc,cross_bal_acc,same_scroll_bal_acc,cross_scroll_bal_acc,bal_acc_gap,within_auc,cross_auc,same_scroll_auc,cross_scroll_auc,auc_gap
+raw_intensity,balanced_accuracy,0.5,0.5003,0.4999,0.5006,-0.0003,0.546,0.546,0.5306,0.5536,-0.0
+gradient_magnitude,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5002,0.5002,0.4999,0.5004,0.0
+st_eigenvalue_large,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5104,0.5104,0.5073,0.512,0.0
+st_eigenvalue_small,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.526,0.526,0.529,0.5245,-0.0
+hessian_eigenvalue_large,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5066,0.5066,0.5072,0.5063,0.0
+st_coherence,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5448,0.5448,0.5564,0.539,-0.0
+hessian_eigenvalue_small,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5083,0.5083,0.5088,0.5081,-0.0
+hessian_laplacian,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5112,0.5112,0.5089,0.5124,0.0
+local_variance,balanced_accuracy,0.5,0.5,0.5,0.5,0.0,0.5238,0.5238,0.524,0.5237,0.0
+ALL_COMBINED,balanced_accuracy,0.5,0.5,0.5,0.5,0.0001,0.6006,0.546,0.5385,0.5498,0.0546
