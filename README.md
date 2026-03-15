@@ -138,3 +138,54 @@ the zero generalization gap. Single FFT pair per layer — negligible cost.
 
 ## Installation
 ```bash
+conda create -n vesuvius python=3.10
+conda activate vesuvius
+conda env update -f environment.yml
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+```
+
+## Usage
+```bash
+# Compute all 10 depth features per fragment (requires downloaded data)
+python scripts/run_depth_features.py
+
+# Evaluate cross-fragment generalization at block level
+python scripts/run_depth_cross_validation.py
+
+# 2D texture feature baseline (Phase 2 comparison)
+python scripts/run_cross_validation.py
+
+# Paganin + depth features experiment
+python scripts/test_paganin_plus_depth_features.py
+```
+
+Data should be placed under `data/fragments/frag{1,2,3}/54keV_exposed_surface/`.
+
+## Key outputs
+
+| File | Description |
+|------|-------------|
+| `results/tables/depth_feature_auc_summary.csv` | Block-level cross-fragment AUC at 3 block sizes |
+| `results/tables/paganin_depth_feature_summary.csv` | Paganin + depth features comparison |
+| `results/tables/cross_fragment_auc_summary.csv` | 2D feature baseline results |
+| `results/figures/paganin_depth_feature_comparison.png` | Main result figure |
+| `results/figures/cross_fragment_auc_heatmaps.png` | 2D feature generalization matrix |
+
+## Limitations
+
+- Three fragments only (Frags 4–6 have no available surface volumes at 
+  this energy; 88 keV does not exist for these fragments)
+- Logistic regression is a linear ceiling on what these features can do 
+  alone — the zero-gap result is necessary but not sufficient for strong 
+  ink detection
+- Raw cross-AUC values of 0.61–0.62 indicate real signal but not 
+  standalone detection. Paganin preprocessing raises this to 0.76–0.77.
+- The Paganin improvement on DLS data is from noise suppression, not 
+  phase retrieval. The effect on ESRF data (Fresnel number ~1.1) may 
+  differ and is not yet validated.
+
+## Data license
+
+EduceLab-Scrolls Dataset (CC-BY-NC 4.0). Cite: Parsons et al. (2023), 
+EduceLab-Scrolls: Verifiable Recovery of Text from Herculaneum Papyri 
+using X-ray CT. arXiv:2304.02084.
