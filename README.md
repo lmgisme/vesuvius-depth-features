@@ -106,12 +106,16 @@ computing depth features:
 | depth_variance | 0.604 | 0.757 | +0.153 |
 | depth_range | 0.616 | 0.765 | +0.148 |
 
-Zero generalization gap is preserved. d/b=200 outperforms d/b=5000 — 
-consistent with DLS being in the geometric optics regime (Fresnel 
-number ~14). The filter acts as regularized noise suppression at these 
-scan parameters, not phase retrieval. Per-layer noise creates 
-fragment-specific depth profiles; mild smoothing makes depth gradients 
-more consistent across fragments without destroying the ink signal.
+Zero generalization gap is preserved. d/b=200 outperforms d/b=5000 --
+consistent with DLS being in the geometric optics regime (Fresnel
+number ~14). DLS reconstruction does not include Paganin filtering, so
+this is first-application Paganin-form smoothing on raw
+absorption-reconstructed data. The filter acts as regularized noise
+suppression at these scan parameters, not phase retrieval. The AUC
+improvement mechanism is noise suppression that preserves depth
+structure, not fringe removal. Per-layer noise creates fragment-specific
+depth profiles; mild smoothing makes depth gradients more consistent
+across fragments without destroying the ink signal.
 
 ## Physical interpretation
 
